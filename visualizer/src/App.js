@@ -4,7 +4,7 @@ function App() {
   const test = [1,2]
   console.log(forwardPass(test,3,2))
   return (
-    <div>Hello</div>
+    <div className="header">Neural Network Visualizer</div>
   );
 }
 
@@ -37,6 +37,7 @@ function forwardPass(input, numOfHiddenNeurons, numOfHiddenLayer) {
 
 
 function forwardPassTrain(inputs, weights, output, desiredOutput){
+    var weightLayer
     const targetValues = desiredOutput
     const observedValues = output
     const finalWeightAdjustment = (observedValues - targetValues)
@@ -53,11 +54,16 @@ function forwardPassTrain(inputs, weights, output, desiredOutput){
 }
 
 
-//ForwardPass with Set Weights and Input
-function forwadPassTraining(inputs,numOfLayers,weights) {
+//Array Contains Input and Weight Layer
+// X,Y position of weight being adjusted
+function adjustWeights(inputArray, weightArray, x, y){
+  var currentInput = inputArray[0]
+  // Trial Repeat 
+  for (let i = 0; i < weightArray.length; i++) {
+    for (let n = 0; n < weightArray.length; n++) {
+      
 
-  for (let i =0; i <= numOfLayers; i++) {
-    console.log(i)
+    }
   }
 }
 
